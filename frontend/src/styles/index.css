@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+:root {
+  /* Primary ink — buttons, active nav, headings */
+  --brand: #111827;
+  --brand-dark: #030712;
+  --brand-mid: #1f2937;
+  --brand-soft: #f3f4f6;
+  --brand-glow: rgba(17, 24, 39, 0.12);
+
+  /* Accent lime — charts, highlights, positive motion */
+  --accent: #b6e63a;
+  --accent-dark: #84cc16;
+  --accent-deep: #65a30d;
+  --accent-soft: #f7fee7;
+  --accent-glow: rgba(182, 230, 58, 0.22);
+
+  --ink: #111827;
+  --surface: #ffffff;
+  --surface-muted: #f0f2f5;
+  --surface-elevated: #ffffff;
+  --surface-chip: #f7f8fb;
+  --surface-border: #e7eaef;
+  --surface-border-strong: #d5dae3;
+
+  --text: #111827;
+  --text-muted: #8b93a7;
+  --text-inverse: #ffffff;
+
+  --success: #16a34a;
+  --success-soft: #ecfdf5;
+  --warning: #f59e0b;
+  --warning-soft: #fff7ed;
+  --danger: #f43f5e;
+  --danger-soft: #fff1f2;
+  --info: #64748b;
+  --info-soft: #f8fafc;
+
+  --chart-1: #b6e63a;
+  --chart-2: #111827;
+  --chart-3: #94a3b8;
+  --chart-4: #f97316;
+  --chart-grid: #eef1f6;
+  --chart-idle: #e8ecf2;
+
+  --shadow-sm: 0 2px 8px rgba(17, 24, 39, 0.04);
+  --shadow-md: 0 12px 32px rgba(17, 24, 39, 0.06);
+  --shadow-lg: 0 24px 48px rgba(17, 24, 39, 0.08);
+  --radius: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 28px;
+  --sans: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  --display: "Manrope", "Plus Jakarta Sans", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --sidebar-width: 248px;
+  --topbar-height: 72px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--surface-muted);
+  color: var(--text);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 42%, white);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

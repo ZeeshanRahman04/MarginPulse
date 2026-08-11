@@ -1,0 +1,7 @@
+node_modules
+.git
+.env
+backups
+src/db/*.sqlite
+*.log
+tests/*.sqlite

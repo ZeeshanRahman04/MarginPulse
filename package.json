@@ -1,0 +1,29 @@
+{
+  "name": "margin-pulse",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @margin-pulse/frontend",
+    "dev:clean": "npm run dev:clean -w @margin-pulse/frontend",
+    "dev:full": "node scripts/dev-full.mjs",
+    "server": "npm run start -w @margin-pulse/backend",
+    "backup": "npm run backup -w @margin-pulse/backend",
+    "restore": "npm run restore -w @margin-pulse/backend",
+    "server:smoke": "npm run test:smoke -w @margin-pulse/backend",
+    "server:edge": "npm run test:edge -w @margin-pulse/backend",
+    "server:compliance": "npm run test:compliance -w @margin-pulse/backend",
+    "server:cors": "npm run test:cors -w @margin-pulse/backend",
+    "test": "npm run test -w @margin-pulse/frontend",
+    "test:run": "npm run test:run -w @margin-pulse/frontend",
+    "build": "npm run build -w @margin-pulse/frontend",
+    "lint": "npm run lint -w @margin-pulse/frontend",
+    "preview": "npm run preview -w @margin-pulse/frontend",
+    "verify": "npm run lint && npm run test:run && npm run build && npm run server:smoke && npm run server:edge && npm run server:compliance && npm run server:cors",
+    "security:audit": "npm audit"
+  }
+}

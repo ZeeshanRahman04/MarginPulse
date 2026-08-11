@@ -1,0 +1,36 @@
+# Local scratch (screen recordings, ffmpeg frames, etc.)
+.tmp/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+.env
+backend/backups/
+backend/backups-test/
+backend/*.pre-restore-*
+backend/tests/*.sqlite
+backend/src/db/*.sqlite
+backend/src/db/*.sqlite-*
+backend/*.sqlite
+backend/*.sqlite-*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
